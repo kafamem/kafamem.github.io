@@ -1,103 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
-
-:root {
-  --font-poppins: "Poppins", sans-serif;
-  --font-allura: "Allura", sans-serif;
-
-  --color-white: #FFFFFF;
-  --color-orange-light: #F89B2E;
-  --color-orange-dark: #7D4300;
-  --color-theme: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  font-size: 62.5%;
-  font-family: var(--font-poppins);
-  font-weight: 300;
-  background: var(--color-theme);
-}
-
-/* GENERAL COMPONENTS */
-
-.heading--primary {
-  font-size: 4.2rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--color-white);
-  /* text-align: justify; */
-  letter-spacing: 1px;
-  margin-bottom: 3.2rem;
-}
-
-.colored__letters {
-  color: var(--color-orange-light);
-}
-
-.white__letters {
-  color: var(--color-white);
-}
-
-.heading--secondary {
-  font-size: 2.5rem;
-  font-style: italic;
-  font-weight: 300;
-  line-height: 1.02;
-  color: var(--color-orange-light);
-  letter-spacing: -0.5px;
-  margin-bottom: 3.2rem;
-}
-
-.branding__style {
-  font-family: var(--font-allura);
-  font-size: 3rem;
-  font-weight: 400;
-  color: var(--color-orange-light);
-}
-
-/* BUTTONS */
-
- .btn:link,
-  .btn:visited {
-    display: inline-block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 1.6rem 3.2rem;
-    border-radius: 1rem 0.5rem 1rem 0.5rem;
-    transition: all 0.3s ;
-  }
-    .btn--cta:link, .btn--cta:visited {
-      color: var(--color-white);
-      background-color: var(--color-orange-light);
-      margin-bottom: 3.6rem;      
-    }
-
-    .btn--cta:hover, .btn--cta:active {
-      color: var(--color-white);
-      background-color: var(--color-orange-dark);      
-    }
-
-    .btn--border:link, .btn--border:visited {
-      background-color: var(--color-white);      
-      color: var(--color-theme);
-    }
-      .gap-right {
-        margin-right: 1.5rem;
-      }
-
-    .btn--border:hover, .btn--border:active {
-      background-color: var(--color-theme);      
-      color: var(--color-white);
-      box-shadow: inset 0 0 0 2px var(--color-white);
-    }
-
 /* HEADER */
 
 .header {
@@ -165,7 +65,6 @@ html, body {
 /* HERO SECTION */
 
 .section__hero {
-  background-color: var(--color-theme);
   padding: 4.8rem 0 10rem 0;
 }
   .hero__container {
@@ -175,15 +74,7 @@ html, body {
       grid-template-columns: 1fr 1fr;
       align-items: center;
       padding: 0 3rem;
-      gap: 10rem;
-    }
-
-    .hero__heading--desc {
-      font-size: 1.5rem;
-      color: var(--color-white);
-      text-align: justify;
-      line-height: 1.2;
-      margin-bottom: 3.6rem;
+      gap: 5rem;
     }
 
     .socialmedia {
@@ -194,7 +85,7 @@ html, body {
         align-items: center;
         margin: 0 1.25rem;
         font-size: 1.56rem;
-        color: var(--color-theme);
+        color: var(--color-grey);
         line-height: 3.75rem;
         margin-right: 0.5rem;
         cursor: pointer;
@@ -224,3 +115,52 @@ html, body {
     .hero__img--slide img {
       border-radius: 2rem 0.5rem 2rem 0.5rem;
     }
+
+/* SECTION ABOUT US */
+
+.section__aboutus {
+  padding: 6rem 0;
+}
+
+.aboutus__img--container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus__img--container::before,
+.aboutus__img--container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 90%;
+}
+
+.aboutus__img--container::before {
+  background-color: var(--color-orange-extra-light);
+  padding-bottom: 85%;
+  z-index: 1;
+}
+
+.aboutus__img--container::after {
+  width: 80%;
+  padding-bottom: 75%;
+  background-color: var(--color-orange-light);
+  z-index: 2;
+}
+
+.aboutus__img {
+  width: 70%;
+  border-radius: 0.5rem 2rem 0.5rem 2rem;
+  z-index: 3;
+  border: 1px solid var(--color-orange-light);
+}
+
+
+
+

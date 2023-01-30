@@ -167,6 +167,10 @@
   padding: 6rem 0;
 }
 
+/* .recipe__cards {
+  padding: 1.6rem;
+} */
+
 .recipe {
   background-color: var(--color-orange-light);
   border-radius: 10px;
@@ -214,6 +218,28 @@
     align-items: center;
     font-size: 1.5rem;
     gap: 1.6rem;
+  }
+
+  .recipe__gallery  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 12px;
+  }
+
+  .recipe__gallery--1 {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .recipe__gallery--1 img {
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .recipe__gallery--1 img:hover {
+    transform: scale(1.1);
   }
 
 

@@ -27,7 +27,8 @@
 
  /* NAVIGATION */
 
- .nav__menu--list {
+ .nav__menu--list,
+ .breadcrum__list {
   display: flex;
   list-style: none;
   align-items: center;
@@ -35,7 +36,9 @@
  }
 
  .nav__menu--link:link,
- .nav__menu--link:visited {
+ .nav__menu--link:visited,
+ .breadcrum__list--link:link,
+ .breadcrum__list--link:visited {
   display: inline-block;
   color: var(--color-white);
   font-size: 1.8rem;
@@ -45,7 +48,9 @@
  }
 
  .nav__menu--link:hover,
- .nav__menu--link:active {
+ .nav__menu--link:active,
+ .breadcrum__list--link:hover,
+ .breadcrum__list--link:active {
   color: var(--color-orange-light);
  }
 
@@ -167,10 +172,6 @@
   padding: 6rem 0;
 }
 
-/* .recipe__cards {
-  padding: 1.6rem;
-} */
-
 .recipe {
   background-color: var(--color-orange-light);
   border-radius: 10px;
@@ -241,6 +242,103 @@
   .recipe__gallery--1 img:hover {
     transform: scale(1.1);
   }
+
+
+
+  /* KONTAKTA OSS */
+
+  .section__kontakta__oss {
+    padding: 6rem 0;
+  }
+
+  .kontakt_oss--breadcrum {
+    margin-bottom: 3rem;
+  }
+
+    .kontakt_oss--link::before {
+      content: "\00a0\00a0>\00a0\00a0";
+      color: var(--color-orange-light);
+    }
+
+  .google-map {
+    height: 38rem;
+    width: 100%;
+  }
+
+.section-cta {
+  padding: 3.2rem 0 8rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+
+  background-image: linear-gradient(to left, var(--color-orange-extra-light), var(--color-orange-light));
+  overflow: hidden;
+}
+
+  .cta__text {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 3.6rem;
+  }
+
+    .cta .heading-secondary {
+      color: inherit;
+      margin-bottom: 3.2rem;
+    }
+.cta__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2.4rem;
+}
+
+  .cta__form label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+
+  .cta__form input,
+  .cta__form select {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--color-white);
+    border-radius: 5px;
+  }
+
+    .cta__form input::placeholder {
+      color: var(--color-grey);
+    }
+
+.input__control input:focus {
+  outline: 0;
+}
+
+.input__control.success input {
+  border-color: var(--color-input-control-success);
+}
+
+.input__control.error input {
+  background-color: var(--color-input-control-error);
+}
+
+.input__control .error {
+  color: var(--color-input-control-error);
+  font-size: 0.563rem;
+  height: 0.813rem;
+}
+
+
+
+  
 
 
 

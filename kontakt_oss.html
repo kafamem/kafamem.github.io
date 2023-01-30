@@ -4,9 +4,82 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <!-- Icon Fonts -->
+  <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>MK Resto | Hemsida</title>
 </head>
 <body>
-  
+  <!-- Header Section -->
+  <header class="header">
+    <a href="index.html" class="logo"><span class="colored__font">MK</span><span class="white__font"> Resto</span><span class="colored__font"><i class="fa-regular fa-fork-knife"></i></span></a>
+    <nav class="nav__menu white__font">
+      <ul class="nav__menu--list">
+        <li><a class="nav__menu--link active" href="index.html">Start</a></li>
+        <li><a class="nav__menu--link" href="#">Om Oss</a></li>
+        <li><a class="nav__menu--link" href="#">Recept</a></li>
+        <li><a class="nav__menu--link nav__cta--btn" href="kontakt_oss.html">Kontakta Oss</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- End of Header Section -->
+
+  <main>
+    <!-- Start Breadcrum Section -->
+    <div class="section__kontakta__oss">
+      <div class="container kontakt_oss--breadcrum">
+        <ul class="breadcrum__list">
+          <li><a class="breadcrum__list--link active" href="index.html">Start</a></li>
+          <li><a href="#" class="breadcrum__list--link kontakt_oss--link">Kontakta Oss</a></li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8153.642844832372!2d15.201637751587233!3d59.275993758636986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465c017f144aff39%3A0xcfe3b0bad018c93e!2zw5ZyZWJybw!5e0!3m2!1ssv!2sse!4v1675042619678!5m2!1ssv!2sse" allowfullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <!-- End of Breadcrum Section -->
+
+    <!-- Start CTA Section -->
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta">
+          <div class="cta__text">
+            <h2 class="heading--primary">Komma i Kontakt</h2>
+
+            <form class="cta__form" action="/" novalidate>
+              <div>
+                <label for="full__name">Fullständiga namn</label>
+                <input id="full__name" class="input__control" name="full__name" type="text" placeholder="Nylander Eriksson" />
+                <div class="error"></div>
+              </div>
+
+              <div>
+                <label for="email">E-postadress</label>
+                <input id="email" class="input__control" type="email" placeholder="info@mkresto.se" />
+                <div class="error"></div>
+              </div>
+
+              <div>
+                <label for="choose__gender">Välj ditt kön</label>
+                <select id="chooseGender">
+                  <option value="gender">Man</option>
+                  <option value="gender">Kvinna</option>
+                </select>
+              </div>
+
+              <button class="btn btn__submit--form" type="submit">Skicka <i class="fa-regular fa-arrow-right"></i></button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- End of CTA Section -->
+  </main>
 </body>
 </html>

@@ -278,68 +278,52 @@
   overflow: hidden;
 }
 
-  .cta__text {
-    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-    font-size: 1.8rem;
-  line-height: 1.8;
-  margin-bottom: 3.6rem;
-  }
 
-    .cta .heading-secondary {
-      color: inherit;
-      margin-bottom: 3.2rem;
-    }
 .cta__form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
-  row-gap: 2.4rem;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 3rem;
 }
 
-  .cta__form label {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-  }
+.cta__form button {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
 
-  .cta__form input,
-  .cta__form select {
-    font-family: "Poppins";
-    font-size: 1.5rem;
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    background-color: var(--color-white);
-    border-radius: 5px;
-  }
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
 
-    .cta__form input::placeholder {
-      color: var(--color-grey);
-    }
+.input-control input {
+  border: 2px solid var(--color-light-white);
+  border-radius: 5px;
+  display: block;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 100%;
+}
 
-.input__control input:focus {
+.input-control input:focus {
   outline: 0;
 }
 
-.input__control.success input {
+.input-control.success input {
   border-color: var(--color-input-control-success);
 }
 
-.input__control.error input {
-  background-color: var(--color-input-control-error);
+.input-control.error input {
+  border-color: var(--color-input-control-error);
 }
 
-.input__control .error {
+.input-control .error {
   color: var(--color-input-control-error);
-  font-size: 0.563rem;
-  height: 0.813rem;
+  font-size: 0.9;
+  height: 13px;
 }
-
-
-
-  
-
-
-
-

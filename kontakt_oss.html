@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <title>MK Resto | Hemsida</title>
+  <!-- JavaScript -->
+  <script defer src="js/kontakt_form_validation.js"></script>
+
+  <title>MK Resto | Kontakta Oss</title>
 </head>
 <body>
   <!-- Header Section -->
@@ -50,30 +53,23 @@
         <div class="cta">
           <div class="cta__text">
             <h2 class="heading--primary">Komma i Kontakt</h2>
-
-            <form class="cta__form" action="/" novalidate>
-              <div>
-                <label for="full__name">Fullständiga namn</label>
-                <input id="full__name" class="input__control" name="full__name" type="text" placeholder="Nylander Eriksson" />
-                <div class="error"></div>
-              </div>
-
-              <div>
-                <label for="email">E-postadress</label>
-                <input id="email" class="input__control" type="email" placeholder="info@mkresto.se" />
-                <div class="error"></div>
-              </div>
-
-              <div>
-                <label for="choose__gender">Välj ditt kön</label>
-                <select id="chooseGender">
-                  <option value="gender">Man</option>
-                  <option value="gender">Kvinna</option>
-                </select>
-              </div>
-
-              <button class="btn btn__submit--form" type="submit">Skicka <i class="fa-regular fa-arrow-right"></i></button>
-            </form>
+            <!-- <div class="container"> -->
+              <form id="form" class="cta__form grid__col--2">
+                  <div class="input-control">
+                      <label for="username">Fullständiga namn</label>
+                      <input id="username" name="username" type="text">
+                      <div class="error"></div>
+                  </div>
+                  <div class="input-control">
+                      <label for="email">E-post Adress</label>
+                      <input id="email" name="email" type="text">
+                      <div class="error"></div>
+                  </div>
+                  
+                  <button class="btn nav__cta--btn" type="submit" value="Validate" />Skicka <i class="fa-regular fa-arrow-right"></i></button>
+              </form>
+          <!-- </div> -->
+              
           </div>
           
         </div>
@@ -81,5 +77,6 @@
     </section>
     <!-- End of CTA Section -->
   </main>
+  
 </body>
 </html>

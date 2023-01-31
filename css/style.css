@@ -12,7 +12,7 @@
 
 .logo {
   font-size: 2.5rem;
-  height: 2.8rem;
+  height: 3.2rem;
   text-decoration: none;
 }
 
@@ -70,8 +70,23 @@
 /* HERO SECTION */
 
 .section__hero {
-  padding: 4.8rem 0 10rem 0;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 6rem 0;
 }
+
+@media(max-width: 1200px) {
+  .section__hero {
+    background-color: var(--color-input-control-error);
+  }
+}
+
+@media(max-width: 600px) {
+  .section__hero {
+    background-color: var(--color-input-control-success);
+  }
+}
+
   .hero__container {
       display: grid;
       max-width: 130rem;
@@ -113,13 +128,52 @@
             background-color: var(--color-orange-light);
           }
 
-    .hero__img--slider {
-      width: 100%;
-    }
+.hero__img--slider {
+  width: 100%;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+  .img__slider--container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+  }
     
-    .hero__img--slide img {
-      border-radius: 2rem 0.5rem 2rem 0.5rem;
-    }
+  .hero__img--slider img {
+    border-radius: 2rem 0.5rem 2rem 0.5rem;
+    object-fit: cover;
+  }
+
+.slide__buttons--container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sliding__btn--right,
+.sliding__btn--left {
+  color: var(--color-white);
+  background-color: var(--color-orange-light);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 49.5%;
+  transition: all 0.3s;
+}
+
+.sliding__btn--right {
+  border-radius: 0rem 0rem 2rem 0rem;
+}
+
+.sliding__btn--left {
+  border-radius: 0rem 0rem 0rem 0.5rem;
+}
+
+.sliding__btn--right:hover,
+.sliding__btn--left:hover {
+  background-color: var(--color-orange-dark);
+}
 
 /* SECTION ABOUT US */
 
@@ -225,7 +279,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 12px;
+    gap: 1.2rem;
   }
 
   .recipe__gallery--1 {
@@ -233,19 +287,81 @@
     border-radius: 10px;
   }
 
-  .recipe__gallery--1 img {
-    display: block;
-    width: 100%;
-    transition: all 0.3s;
-  }
+    .recipe__gallery--1 img {
+      display: block;
+      width: 100%;
+      transition: all 0.3s;
+    }
 
-  .recipe__gallery--1 img:hover {
-    transform: scale(1.1);
-  }
+      .recipe__gallery--1 img:hover {
+        transform: scale(1.1);
+      }
+
+/* FOOTER */
+
+.footer {
+  padding: 6rem 0;
+  border-top: 1px solid var(--color-grey);
+}
+
+.footer__heading {
+  color: var(--color-white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.footer__desc {
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+.contact-us {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-style: normal;
+  line-height: 1.6rem;
+}
 
 
+.logo {
+  display: block;
+  margin-bottom: 3rem;
+}
 
-  /* KONTAKTA OSS */
+.footer__navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__link:link,
+.footer__link:visited {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.footer__link i {
+  display: inline;
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer__link:hover,
+.footer__link:active {
+  color: var(--color-orange-light);
+}
+
+.socialmedia__links {
+  display: inline-block;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+/* KONTAKTA OSS */
 
   .section__kontakta__oss {
     padding: 6rem 0;
@@ -266,14 +382,13 @@
   }
 
 .section-cta {
-  padding: 3.2rem 0 8rem;
+  padding: 6rem 0;
 }
 
 .cta {
   display: flex;
   justify-content: center;
   border-radius: 5px;
-
   background-image: linear-gradient(to left, var(--color-orange-extra-light), var(--color-orange-light));
   overflow: hidden;
 }
@@ -281,10 +396,10 @@
 
 .cta__form {
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
   background-color: var(--color-white);
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 1.2rem;
   margin-bottom: 3rem;
 }
 
@@ -302,7 +417,7 @@
 }
 
 .input-control input {
-  border: 2px solid var(--color-light-white);
+  border: 2px solid var(--color-white);
   border-radius: 5px;
   display: block;
   font-size: 1.2rem;
@@ -325,5 +440,5 @@
 .input-control .error {
   color: var(--color-input-control-error);
   font-size: 0.9;
-  height: 13px;
+  height: 1.3rem;
 }

@@ -11,6 +11,11 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/queries.css" />
+
+  <!-- JavaScript -->
+  <script defer src="slideshow.js"></script>
+  <script defer src="slideshow.js"></script>
 
   <title>MK Resto | Hemsida</title>
 </head>
@@ -53,11 +58,25 @@
             </a>
           </div>
         </div>
+
         <div class="hero__img--slider">
-          <div class="hero__img--slide">
+          <div class="img__slider--container" id="slideImg">
             <img src="assets/images/gallery/hero-slides/restaurant_interior.png" alt="Restaurant interior">
+            
+            <img  src="assets/images/gallery/hero-slides/hero-img-1.png" alt="Restaurant interior">  
+            
+            <img id="slideImg" src="assets/images/gallery/hero-slides/hero-image-4.png" alt="Blåbar recept">
+            
+            <img id="slideImg" src="assets/images/gallery/hero-slides/restaurant_paterasen.png" alt="Restaurang Ute på terasen">
+          </div>
+
+          <div class="slide__buttons--container">
+            <button id="leftArrow" class="sliding__btn--left"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="rightArrow" class="sliding__btn--right"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
+
+        
       </div>
     </section>
     <!-- End of Hero Section -->
@@ -144,5 +163,49 @@
     </section>
     <!-- End of Recipe Section -->
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid__col--4">
+      <div class="logo__col">
+        <a href="index.html" class="logo"><span class="colored__font">MK</span><span class="white__font"> Resto</span><span class="colored__font"><i class="fa-regular fa-fork-knife"></i></span></a>
+        <p class="footer__desc">Börja med en hälsosam diet för ett hälsosamt liv. Lorem Ipsum.</p>
+      </div>
+      <div class="address__col">
+        <p class="footer__heading"><span class="colored__font">Ko</span>ntakta Oss</p>
+        <address class="contact-us">
+          <p>Karlslundsgatan 00, <br /><br /> 703 43 Örebro, SE</p><br />
+            <p><i class="fa-regular fa-at"></i> info@mkresto.se</p><br />
+            <p><i class="fa-regular fa-phone"></i> 700-000-00 00</phref=>
+          </p>
+        </address>
+      </div>
+      <nav class="navigation__col">
+        <p class="footer__heading"><span class="colored__font">Vå</span>ra Restaurang</p>
+        <ul class="footer__navigation">
+          <li><a class="footer__link" href="#">Om MKResto</a></li>
+          <li><a class="footer__link" href="#">Våra Meny</a></li>
+        </ul>
+      </nav>
+      <div class="socialmedia">
+        <p class="footer__heading"><span class="colored__font">So</span>ciala Media</p>
+        
+        <ul class="socialmedia__links">
+          <li>
+            <a href="https://www.facebook.com/" class="footer__link"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" class="footer__link"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" class="footer__link"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/" class="footer__link"><i class="fab fa-pinterest"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

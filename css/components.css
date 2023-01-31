@@ -23,8 +23,7 @@ html, body {
   --font-poppins: "Poppins", sans-serif;
   --font-allura: "Allura", sans-serif;
 
-  --color-white: #FFFFFF;
-  --color-light-white: #f0f0f0;
+  --color-white: #f0f0f0;
   --color-orange-light: #F89B2E;
   --color-orange-extra-light: #FBC382;
   --color-orange-dark: #7D4300;
@@ -103,6 +102,10 @@ html, body {
 
 .grid__col--3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid__col--4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid__center--vertical {
